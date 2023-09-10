@@ -14,7 +14,12 @@ This repository contains exercises and docs for using javascript array methods.
 9. [find](#includes)
 10. [indexOf](#indexOf)
 11. [concat](#concat)
-
+12. [slice](#slice)
+13. [splice](#splice)
+14. [push](#push)
+15. [pop](#pop)
+16. [shift](#shift)
+17. [unshift](#unshift)
 
 ## .some()
 
