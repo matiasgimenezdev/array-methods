@@ -2,6 +2,14 @@
 
 This repository contains exercises for using javascript array methods.
 
+### Index
+1. [some](#some)
+2. [every](#every)
+3. [map](#map)
+4. [filter](#filter)
+5. [reduce](#reduce)
+
+
 ## .some()
 
 Some works by taking a function that returns true or false. If any of the elements in the array return true, then the entire statement returns true. Another way to think of `some` is that it checks that _any_ value passes the conditional provided by the function.
