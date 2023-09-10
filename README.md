@@ -1,6 +1,6 @@
 # Array methods in Javascript
 
-This repository contains exercises for using javascript array methods.
+This repository contains exercises and docs for using javascript array methods.
 
 ## Index
 1. [some](#some)
