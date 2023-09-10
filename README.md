@@ -286,3 +286,15 @@ Notice the empty object as the second argument in reduce, as well as the fact th
 ## .indexOf()
 ---
 ## .concat()
+---
+## .slice()
+---
+## .splice()
+---
+## .push()
+---
+## .pop()
+---
+## .shift()
+---
+## .unshift()
