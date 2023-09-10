@@ -2,7 +2,7 @@
 
 This repository contains exercises for using javascript array methods.
 
-### .some()
+## .some()
 
 Some works by taking a function that returns true or false. If any of the elements in the array return true, then the entire statement returns true. Another way to think of `some` is that it checks that _any_ value passes the conditional provided by the function.
 
@@ -47,7 +47,7 @@ ages.some(lessThan21); // true
 
 ---
 
-### .every()
+## .every()
 
 Some works by taking a function that returns true or false. If all of the elements in the array return true, _only then_ will the entire statement return true.
 
@@ -86,7 +86,7 @@ ages.every(twentyOneOrAbove); // false
 
 ---
 
-### .map()
+## .map()
 
 Map works by returning a new array after a function has been applied to every single element in the array.
 
@@ -142,7 +142,7 @@ Calling `return` is _crucial_ when using all of these higher order functions. `.
 
 ---
 
-### .filter()
+## .filter()
 
 Filter allows us to remove elements that don't fit certain criteria. It's incredibly useful for whittling down large arrays so that we only pick out those items we want!
 
@@ -179,7 +179,7 @@ Just like the other functions here, `.filter()` also takes additional arguments,
 
 ---
 
-### .reduce()
+## .reduce()
 
 Reduce is an incredibly powerful method that allows us to combine all of the result in an array into a single result. There are a few different ways we can use it, so it's important to read the documentation carefully!
 
