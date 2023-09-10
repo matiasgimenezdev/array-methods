@@ -8,6 +8,12 @@ This repository contains exercises for using javascript array methods.
 3. [map](#map)
 4. [filter](#filter)
 5. [reduce](#reduce)
+6. [forEach](#forEach)
+7. [sort](#sort)
+8. [includes](#find)
+9. [find](#includes)
+10. [indexOf](#indexOf)
+11. [concat](#concat)
 
 
 ## .some()
@@ -262,3 +268,16 @@ users.reduce((usersObj, user) => {
 ```
 
 Notice the empty object as the second argument in reduce, as well as the fact that we're constantly returning our `usersObj` on each iteration.
+
+---
+## .forEach()
+---
+## .sort()
+---
+## .includes()
+---
+## .find()
+---
+## .indexOf()
+---
+## .concat()
