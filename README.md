@@ -2,7 +2,7 @@
 
 This repository contains exercises for using javascript array methods.
 
-### Index
+## Index
 1. [some](#some)
 2. [every](#every)
 3. [map](#map)
