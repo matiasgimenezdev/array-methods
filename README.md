@@ -46,8 +46,7 @@ This repository contains exercises and docs for using javascript array methods.
 
 ## .forEach()
 
-The `forEach()` method _executes a provided function (callback) once for each array element_.
-[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+The [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method _executes a provided function (callback) once for each array element_.
 
 ###### Example
 
@@ -68,8 +67,7 @@ items.forEach((item) => {
 
 ## .includes()
 
-The `includes()` method determines whether an array _includes a certain value among its entries_, returning `true` or `false` as appropriate.
-[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+The  [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method determines whether an array _includes a certain value among its entries_, returning `true` or `false` as appropriate.
 
 ###### Example
 
@@ -106,7 +104,6 @@ console.log(pets.includes('at')); // Expected output: false
 
 The [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method _adds the specified element/s to the end of an array_ and _returns the new length of the array_
 
-
 ###### Example
 
 ```javascript
@@ -129,8 +126,9 @@ console.log(animals);
 
 ## .pop()
 
-The `pop()` method _removes the last element_ from an array and _returns that element_. This method changes the length of the array.
-[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+The [`pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) method _removes the last element_ from an array and _returns that element_. This method changes the length of the array.
+
+###### Example
 
 ```javascript
 const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
@@ -159,8 +157,9 @@ console.log(plants);
 
 ## .reverse()
 
-The `reverse()` method _reverses an array in place and returns the original array modified (a reference to it)_. The first array element now becoming the last, and the last array element becoming the first. To reverse the elements in an array _without mutating the original array_, use `toReversed()`.
-[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+The [`reverse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) method _reverses an array in place and returns the original array modified (a reference to it)_. The first array element now becoming the last, and the last array element becoming the first. To reverse the elements in an array _without mutating the original array_, use [`toReversed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
+
+###### Example
 
 ```javascript
 const array> = ['one', 'two', 'three'];
