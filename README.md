@@ -55,7 +55,7 @@ const items = ['item1', 'item2', 'item3'];
 const itemsCopy = [];
 
 items.forEach((item) => {
-	copyItems.push(item);
+    copyItems.push(item);
 });
 ```
 
