@@ -21,49 +21,10 @@ This repository contains exercises and docs for using javascript array methods.
 15. [pop](#pop)
 16. [shift](#shift)
 17. [unshift](#unshift)
+18. [reverse](#reverse)
+19. [keys](#keys)
 
 ## .some()
-
-Some works by taking a function that returns true or false. If any of the elements in the array return true, then the entire statement returns true. Another way to think of `some` is that it checks that _any_ value passes the conditional provided by the function.
-
-[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
-
-###### Example
-
-Imagine we have a group of users that are the following age who have all signed up for some sort of tour through our application.
-
-```javascript
-const ages = [23, 32, 17, 19, 34];
-```
-
-We want to show an ad that displays delicious beer but don't want to do so if any of the group members are under 21. A function that just tests whether or not a value is less than 21 might look like this:
-
-```javascript
-const lessThan21 = (age) => {
-	return age < 21;
-};
-
-// lessThan21(20) >> true
-// lessThan21(30) >> false
-```
-
-We can use `some` to check if any of the values are less than 21 in just one go:
-
-```javascript
-const anyLessThan21 = (ages) => {
-	return ages.some((age) => {
-		return age < 21;
-	});
-};
-
-// anyLessThan21(ages) >> true
-```
-
-Alternatively, you could simply use the named function with `.some()`.
-
-```javascript
-ages.some(lessThan21); // true
-```
 
 ---
 
@@ -85,6 +46,20 @@ ages.some(lessThan21); // true
 
 ## .forEach()
 
+The `forEach()` method _executes a provided function (callback) once for each array element_.
+[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
+###### Example
+
+```javascript
+const items = ['item1', 'item2', 'item3'];
+const itemsCopy = [];
+
+items.forEach((item) => {
+	copyItems.push(item);
+});
+```
+
 ---
 
 ## .sort()
@@ -92,6 +67,18 @@ ages.some(lessThan21); // true
 ---
 
 ## .includes()
+
+The `includes()` method determines whether an array _includes a certain value among its entries_, returning `true` or `false` as appropriate.
+[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+
+###### Example
+
+```javascript
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat')); // Expected output: true
+console.log(pets.includes('at')); // Expected output: false
+```
 
 ---
 
@@ -117,9 +104,48 @@ ages.some(lessThan21); // true
 
 ## .push()
 
+The `push()` method _adds the specified element/s to the end of an array_ and _returns the new length of the array_
+[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+
+###### Example
+
+```javascript
+const animals = ['pigs', 'goats', 'sheep'];
+
+let length = animals.push('cows');
+console.log(length);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+length = animals.push('chickens', 'cats', 'dogs');
+console.log(length);
+// Expected output: 7
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
+
 ---
 
 ## .pop()
+
+The `pop()` method _removes the last element_ from an array and _returns that element_. This method changes the length of the array.
+[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+
+```javascript
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
 
 ---
 
@@ -128,3 +154,28 @@ ages.some(lessThan21); // true
 ---
 
 ## .unshift()
+
+---
+
+## .reverse()
+
+The `reverse()` method _reverses an array in place and returns the original array modified (a reference to it)_. The first array element now becoming the last, and the last array element becoming the first. To reverse the elements in an array _without mutating the original array_, use `toReversed()`.
+[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+
+```javascript
+const array> = ['one', 'two', 'three'];
+console.log('array:', array);
+// Expected output: "array:" Array ["one", "two", "three"]
+
+const reversed = array.reverse();
+console.log('reversed:', reversed);
+// Expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log('array:', array);
+// Expected output: "array:" Array ["three", "two", "one"]
+```
+
+---
+
+## .keys()

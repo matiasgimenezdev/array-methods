@@ -4,7 +4,7 @@
 	"description": "Array methods exercises",
 	"main": "index.js",
 	"scripts": {
-		"dev": "ts-node-dev exercises/02-arrayClone.ts"
+		"dev": "ts-node-dev exercises/04-reverse.ts"
 	},
 	"author": "",
 	"license": "ISC",
