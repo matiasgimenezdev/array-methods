@@ -104,8 +104,8 @@ console.log(pets.includes('at')); // Expected output: false
 
 ## .push()
 
-The `push()` method _adds the specified element/s to the end of an array_ and _returns the new length of the array_
-[Check out the docs.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+The [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method _adds the specified element/s to the end of an array_ and _returns the new length of the array_
+
 
 ###### Example
 
