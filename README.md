@@ -26,10 +26,40 @@ This repository contains exercises and docs for using javascript array methods.
 
 ## .some()
 
+The [`some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) method _tests whether at least one element in the array passes the test implemented by the provided callback function_. It returns `true` if, in the array, it finds an element for which the provided function returns true; otherwise, it returns `false`.
+
+###### Example
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+// Checks whether a number is even
+console.log(numbers.some((number) => {
+    number % 2 === 0
+}));
+// Expected output: true
+
+console.log([1, 13, 3, 7, 5].some((number) => number % 2 === 0))
+// Expected output: false
+```
 ---
 
 ## .every()
 
+The [`every()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) method _tests whether all elements in the array pass the test implemented by the provided callback function_. It returns `false` if, in the array, it finds an element for which the provided function returns false; otherwise, it returns `true`.
+
+###### Example
+
+```javascript
+const numbers = [1, 30, 39, 29];
+
+// Checks whether all numbers are below a threshold
+console.log(numbers.every((number) => number < 40));
+// Expected output: true
+
+console.log([1, 100, 39, 29].every((number) => number < 40))
+// Expected output: false
+```
 ---
 
 ## .map()
@@ -37,6 +67,19 @@ This repository contains exercises and docs for using javascript array methods.
 ---
 
 ## .filter()
+
+The [`filter()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) _creates a referenced copy of a given array, removing the elements that do not pass the test_ implemented on the provided callback function.
+
+###### Example
+
+```javascript
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ---
 
@@ -157,7 +200,7 @@ console.log(plants);
 
 ## .reverse()
 
-The [`reverse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) method _reverses an array in place and returns the original array modified (a reference to it)_. The first array element now becoming the last, and the last array element becoming the first. <br> <br>
+The [`reverse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) method _reverses an array in place and returns the original array modified (a reference to it)_. The first array element now becomes the last, and the last array element becomes the first. <br> <br>
 To reverse the elements in an array _without mutating the original array_, use [`toReversed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
 
 ###### Example
@@ -171,7 +214,7 @@ const reversed = array.reverse();
 console.log('reversed:', reversed);
 // Expected output: "reversed:" Array ["three", "two", "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
+// Careful: array.reverse() is destructive -- it changes the original array.
 console.log('array:', array);
 // Expected output: "array:" Array ["three", "two", "one"]
 ```
