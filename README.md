@@ -1,5 +1,11 @@
 # Array methods in Javascript
 
+JavaScript gives us several tools for iterating over the items in an array. We could have used a for loop, and it's arguably much simpler. There are no complicated callback functions.
+
+Taken as a whole, this family of array methods allows us to do all sorts of amazing things, like finding a particular item in the array, filtering a list, and much more.
+
+All of the methods in this family follow the same basic structure. For example, they all support the **optional index parameter** to obtain the index of the current element of the array.
+
 This repository contains exercises and docs for using javascript array methods.
 
 ## Index
@@ -34,14 +40,17 @@ The [`some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 const numbers = [1, 2, 3, 4, 5];
 
 // Checks whether a number is even
-console.log(numbers.some((number) => {
-    number % 2 === 0
-}));
+console.log(
+	numbers.some((number) => {
+		number % 2 === 0;
+	})
+);
 // Expected output: true
 
-console.log([1, 13, 3, 7, 5].some((number) => number % 2 === 0))
+console.log([1, 13, 3, 7, 5].some((number) => number % 2 === 0));
 // Expected output: false
 ```
+
 ---
 
 ## .every()
@@ -57,28 +66,58 @@ const numbers = [1, 30, 39, 29];
 console.log(numbers.every((number) => number < 40));
 // Expected output: true
 
-console.log([1, 100, 39, 29].every((number) => number < 40))
+console.log([1, 100, 39, 29].every((number) => number < 40));
 // Expected output: false
 ```
+
 ---
 
 ## .map()
+
+The [`map()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) _creates a new array populated with the results of calling a provided function_ on every element in the calling array.
+
+###### Example
+
+```javascript
+const people = [
+	{ name: 'Aisha', grade: 89 },
+	{ name: 'Bruno', grade: 55 },
+	{ name: 'Carlos', grade: 68 },
+	{ name: 'Dacian', grade: 71 },
+	{ name: 'Esther', grade: 40 },
+];
+
+// Pass a callback function to map
+const resultArray = array1.map((number) => number * 2);
+
+const screamedNames = people.map((person) => {
+	return person.name.toUpperCase();
+});
+
+console.log(screamedNames); // Expected output: Array ['AISHA', 'BRUNO','CARLOS', 'DACIAN', 'ESTHER']
+```
 
 ---
 
 ## .filter()
 
-The [`filter()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) _creates a referenced copy of a given array, removing the elements that do not pass the test_ implemented on the provided callback function.
+The [`filter()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) _creates a referenced copy of a given array, removing the elements that do not pass the test_ implemented on the provided callback function. That callback function will be called once per item in the array and should return `true` or `false`. Based on that result, the element will be or not in the new array.
 
 ###### Example
 
 ```javascript
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const words = [
+	'spray',
+	'limit',
+	'elite',
+	'exuberant',
+	'destruction',
+	'present',
+];
 
 const result = words.filter((word) => word.length > 6);
 
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
+console.log(result); // Expected output: Array ["exuberant", "destruction", "present"]
 ```
 
 ---
@@ -89,7 +128,7 @@ console.log(result);
 
 ## .forEach()
 
-The [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method _executes a provided function (callback) once for each array element_.
+The [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method _executes a provided function (callback) once for each array element_. In many ways, is quite a lot like `map()`, the difference is that `map()` produces a new array with the transformed values and `forEach()` not (always returns undefined).
 
 ###### Example
 
@@ -98,7 +137,7 @@ const items = ['item1', 'item2', 'item3'];
 const itemsCopy = [];
 
 items.forEach((item) => {
-    copyItems.push(item);
+	copyItems.push(item);
 });
 ```
 
@@ -110,7 +149,7 @@ items.forEach((item) => {
 
 ## .includes()
 
-The  [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method determines whether an array _includes a certain value among its entries_, returning `true` or `false` as appropriate.
+The [`includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method determines whether an array _includes a certain value among its entries_, returning `true` or `false` as appropriate.
 
 ###### Example
 
@@ -153,16 +192,12 @@ The [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 const animals = ['pigs', 'goats', 'sheep'];
 
 let length = animals.push('cows');
-console.log(length);
-// Expected output: 4
-console.log(animals);
-// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+console.log(length); // Expected output: 4
+console.log(animals); // Expected output: Array ["pigs", "goats", "sheep", "cows"]
 
 length = animals.push('chickens', 'cats', 'dogs');
-console.log(length);
-// Expected output: 7
-console.log(animals);
-// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+console.log(length); // Expected output: 7
+console.log(animals); // Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
 ```
 
 ---
@@ -176,16 +211,13 @@ The [`pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 ```javascript
 const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
 
-console.log(plants.pop());
-// Expected output: "tomato"
+console.log(plants.pop()); // Expected output: "tomato"
 
-console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+console.log(plants); // Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
 
 plants.pop();
 
-console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+console.log(plants); // Expected output: Array ["broccoli", "cauliflower", "cabbage"]
 ```
 
 ---
@@ -207,16 +239,13 @@ To reverse the elements in an array _without mutating the original array_, use [
 
 ```javascript
 const array> = ['one', 'two', 'three'];
-console.log('array:', array);
-// Expected output: "array:" Array ["one", "two", "three"]
+console.log('array:', array); // Expected output: "array:" Array ["one", "two", "three"]
 
 const reversed = array.reverse();
-console.log('reversed:', reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+console.log('reversed:', reversed); // Expected output: "reversed:" Array ["three", "two", "one"]
 
 // Careful: array.reverse() is destructive -- it changes the original array.
-console.log('array:', array);
-// Expected output: "array:" Array ["three", "two", "one"]
+console.log('array:', array); // Expected output: "array:" Array ["three", "two", "one"]
 ```
 
 ---
