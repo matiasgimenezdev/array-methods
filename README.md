@@ -29,6 +29,7 @@ This repository contains exercises and docs for using javascript array methods.
 17. [unshift](#unshift)
 18. [reverse](#reverse)
 19. [keys](#keys)
+20. [fill](#fill)
 
 ## .some()
 
@@ -251,3 +252,7 @@ console.log('array:', array); // Expected output: "array:" Array ["three", "two"
 ---
 
 ## .keys()
+
+---
+
+## .fill()
