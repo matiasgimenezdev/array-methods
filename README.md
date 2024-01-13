@@ -248,7 +248,7 @@ console.log(beasts.indexOf('giraffe')); // Expected output: -1
 
 ## .concat()
 
-The [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) is used to _merge two or more arrays_. This method does not change the existing arrays, but instead returns a new array.
+The [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method is used to _merge two or more arrays_. This method does not change the existing arrays, but instead returns a new array.
 
 ```javascript
 const firstArray = ['a', 'b', 'c'];
@@ -262,6 +262,18 @@ console.log(thirdArray);
 ---
 
 ## .slice()
+
+The [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method returns a [shallow copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy) of a _portion of an array into a new array object_ selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+```javascript
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+```
 
 ---
 
