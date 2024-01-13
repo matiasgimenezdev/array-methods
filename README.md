@@ -279,6 +279,21 @@ console.log(animals.slice(2, 4));
 
 ## .splice()
 
+The [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method _changes the contents of an array_ by removing or replacing existing elements and/or adding new elements.
+
+```javascript
+const months = ['Jan', 'March', 'April', 'June'];
+// Inserts at index 1
+months.splice(1, 0, 'Feb');
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+// Replaces 1 element at index 4
+months.splice(4, 1, 'May');
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
+
 ---
 
 ## .push()
