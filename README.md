@@ -17,19 +17,20 @@ This repository contains exercises and docs for using javascript array methods.
 5. [reduce](#reduce)
 6. [forEach](#forEach)
 7. [sort](#sort)
-8. [includes](#find)
-9. [find](#includes)
-10. [indexOf](#indexOf)
-11. [concat](#concat)
-12. [slice](#slice)
-13. [splice](#splice)
-14. [push](#push)
-15. [pop](#pop)
-16. [shift](#shift)
-17. [unshift](#unshift)
-18. [reverse](#reverse)
-19. [keys](#keys)
-20. [fill](#fill)
+8. [includes](#includes)
+9. [find](#find)
+10. [findIndex](#findIndex)
+11. [indexOf](#indexOf)
+12. [concat](#concat)
+13. [slice](#slice)
+14. [splice](#splice)
+15. [push](#push)
+16. [pop](#pop)
+17. [shift](#shift)
+18. [unshift](#unshift)
+19. [reverse](#reverse)
+20. [keys](#keys)
+21. [fill](#fill)
 
 ## .some()
 
@@ -197,6 +198,34 @@ console.log(pets.includes('at')); // Expected output: false
 ---
 
 ## .find()
+
+The [`find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) _returns the first element in the provided array that satisfies the provided testing function_.If no values satisfy the testing function, undefined is returned.
+
+###### Example
+
+```javascript
+const numbers = [5, 12, 8, 130, 44];
+
+const found = numbers.find((element) => element > 10);
+
+console.log(found); // Expected output: 12
+```
+
+---
+
+## .findIndex()
+
+The [`findIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) _returns the index of the first element in an array that satisfies the provided testing function_.If no elements satisfy the testing function, -1 is returned.
+
+###### Example
+
+```javascript
+const numbers = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(numbers.findIndex(isLargeNumber)); // Expected output: 3
+```
 
 ---
 
