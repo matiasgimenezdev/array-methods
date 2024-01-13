@@ -403,6 +403,42 @@ console.log('array:', array); // Expected output: "array:" Array ["three", "two"
 
 ## .keys()
 
+The [`keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys) method _returns a new array [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object_ that _contains the keys for each index in the array_.
+
+###### Example
+
+```javascript
+const numbers = ['a', 'b', 'c'];
+const iterator = numbers.keys();
+
+for (const key of iterator) {
+	console.log(key);
+}
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
+
 ---
 
 ## .fill()
+
+The [`fill()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) method _changes all elements within a range of indices in an array_ to a static value. It returns the modified array. If you call the method without specifying start & end index, it will fill the entire array with the specified value.
+
+###### Example
+
+```javascript
+const numbers = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(numbers.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(numbers.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+
+// Replace all the elements of the array
+console.log(numbers.fill(6));
+// Expected output: Array [6, 6, 6, 6]
+```
