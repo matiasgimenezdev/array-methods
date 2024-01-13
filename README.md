@@ -248,6 +248,17 @@ console.log(beasts.indexOf('giraffe')); // Expected output: -1
 
 ## .concat()
 
+The [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) is used to _merge two or more arrays_. This method does not change the existing arrays, but instead returns a new array.
+
+```javascript
+const firstArray = ['a', 'b', 'c'];
+const secondArray = ['d', 'e', 'f'];
+const thirdArray = firstArray.concat(secondArray);
+
+console.log(thirdArray);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
+
 ---
 
 ## .slice()
