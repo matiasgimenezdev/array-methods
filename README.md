@@ -231,6 +231,19 @@ console.log(numbers.findIndex(isLargeNumber)); // Expected output: 3
 
 ## .indexOf()
 
+The [`indexOf()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) _returns the first index at which a given element can be found in the array_ or -1 if it is not present. You can also define a starting index.
+
+```javascript
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison')); // Expected output: 1
+
+const fromIndex = 2;
+console.log(beasts.indexOf('bison', fromIndex)); // Expected output: 4
+
+console.log(beasts.indexOf('giraffe')); // Expected output: -1
+```
+
 ---
 
 ## .concat()
