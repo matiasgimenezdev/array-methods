@@ -366,6 +366,19 @@ console.log(firstElement);
 
 ## .unshift()
 
+The [`unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) method _adds the specified elements to the beginning of an array_ and _returns the new length of the array_.
+
+###### Example
+
+```javascript
+const numbers = [1, 2, 3];
+
+console.log(numbers.unshift(4, 5)); // Expected output: 5
+
+console.log(numbers);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
+
 ---
 
 ## .reverse()
