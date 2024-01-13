@@ -125,6 +125,23 @@ console.log(result); // Expected output: Array ["exuberant", "destruction", "pre
 
 ## .reduce()
 
+The [`reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) method _executes a user-supplied callback function on each element of the array passing in the return value from the calculation on the preceding element_. The final result of running the reducer across all elements of the array is a single value.
+The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0)
+
+###### Example
+
+```javascript
+const numbers = [15.5, 2.3, 1.1, 4.7];
+const initialValue = 0
+
+const sum = numbers.reduce((total, num) {
+	return total + Math.round(num);
+}, initialValue)
+
+console.log(sum); // Expected output: 24
+
+```
+
 ---
 
 ## .forEach()
