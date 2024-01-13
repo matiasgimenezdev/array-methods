@@ -233,6 +233,8 @@ console.log(numbers.findIndex(isLargeNumber)); // Expected output: 3
 
 The [`indexOf()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) _returns the first index at which a given element can be found in the array_ or -1 if it is not present. You can also define a starting index.
 
+###### Example
+
 ```javascript
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 
@@ -250,6 +252,8 @@ console.log(beasts.indexOf('giraffe')); // Expected output: -1
 
 The [`concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method is used to _merge two or more arrays_. This method does not change the existing arrays, but instead returns a new array.
 
+###### Example
+
 ```javascript
 const firstArray = ['a', 'b', 'c'];
 const secondArray = ['d', 'e', 'f'];
@@ -264,6 +268,8 @@ console.log(thirdArray);
 ## .slice()
 
 The [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method returns a [shallow copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy) of a _portion of an array into a new array object_ selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+###### Example
 
 ```javascript
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
@@ -280,6 +286,8 @@ console.log(animals.slice(2, 4));
 ## .splice()
 
 The [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method _changes the contents of an array_ by removing or replacing existing elements and/or adding new elements.
+
+###### Example
 
 ```javascript
 const months = ['Jan', 'March', 'April', 'June'];
@@ -337,6 +345,22 @@ console.log(plants); // Expected output: Array ["broccoli", "cauliflower", "cabb
 ---
 
 ## .shift()
+
+The [`shift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method _removes the first element from an array_ and _returns that removed element_. This method changes the length of the array.
+
+###### Example
+
+```javascript
+const numbers = [1, 2, 3];
+
+const firstElement = numbers.shift();
+
+console.log(numbers);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
+```
 
 ---
 
