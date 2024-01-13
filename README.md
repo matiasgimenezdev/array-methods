@@ -163,6 +163,22 @@ items.forEach((item) => {
 
 ## .sort()
 
+The [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method _sorts the elements of an array_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+###### Example
+
+```javascript
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const numbers = [1, 30, 4, 21, 100000];
+numbers.sort();
+console.log(numbers);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
+
 ---
 
 ## .includes()
